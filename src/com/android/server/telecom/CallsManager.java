@@ -1148,7 +1148,7 @@ public class CallsManager extends Call.ListenerBase implements VideoProviderProx
                 Call callToHangup = getFirstCallWithState(
                         CallState.RINGING, CallState.DIALING, CallState.ACTIVE, CallState.ON_HOLD);
                 if (callToHangup != null) {
-                    callToHangup.disconnect();
+                    disconnectCall(callToHangup);
                     return true;
                 }
             }
